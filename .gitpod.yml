@@ -1,0 +1,7 @@
+image: ghcr.io/cpp-review-dune/introductory-review/aur
+
+tasks:
+  - name: Install JuliaLang
+    command: |
+      yay -Syyu julia --noconfirm
+      julia -e 'import Pkg; Pkg.add("JuMP", "GLPK")'

@@ -3,5 +3,5 @@ image: ghcr.io/cpp-review-dune/introductory-review/hdnum
 tasks:
   - name: Install JuliaLang
     command: |
-      sudo -Syyu julia --noconfirm --needed
-      julia -e 'import Pkg; Pkg.add("JuMP", "GLPK")'
+      sudo pacman -Syyu julia --noconfirm --needed
+      julia -e 'using Pkg; Pkg.add("JuMP"); Pkg.add("GLPK")'

@@ -1,7 +1,7 @@
-image: ghcr.io/cpp-review-dune/introductory-review/hdnum
+image: registry.gitlab.com/dune-archiso/images/dune-archiso-yay
 
 tasks:
   - name: Install JuliaLang
     command: |
-      sudo pacman -Syyu julia ripgrep git --noconfirm --needed >/dev/null 2>&1
+      sudo pacman -Syyu julia ripgrep --noconfirm --needed >/dev/null 2>&1
       julia -e 'using Pkg; Pkg.add("JuMP"); Pkg.add("GLPK")'
